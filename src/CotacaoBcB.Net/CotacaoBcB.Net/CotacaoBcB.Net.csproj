@@ -63,6 +63,7 @@
     <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="CotacaoBcB.Net.nuspec" />
     <None Include="Service References\WsBcb\CotacaoBcB.Net.WsBcb.getUltimosValoresSerieVOResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>

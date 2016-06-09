@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<package>
+  <metadata>
+    <id>CotacaoBcb.Net</id>
+    <version>1.0.0</version>
+    <authors>Sihmma S.A.</authors>
+    <description>Este pacote oferece rotinas para consultar cotações de Índices através de WS fornecido pelo Banco Central do Brasil.</description>
+    <language>pt-BR</language>
+    <projectUrl>https://github.com/marconildo/CotacaoBancoCentral.Net/</projectUrl>
+  </metadata>
+  <files>
+    <file src="bin\Release\CotacaoBcB.Net.dll" target="lib" />
+  </files>
+</package>
