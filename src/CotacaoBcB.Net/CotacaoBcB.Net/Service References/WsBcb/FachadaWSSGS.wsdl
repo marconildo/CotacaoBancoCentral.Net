@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:intf="https://www3.bcb.gov.br/wssgs/services/FachadaWSSGS" xmlns:apachesoap="http://xml.apache.org/xml-soap" xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:tns1="http://DefaultNamespace" xmlns:tns2="http://comum.ws.casosdeuso.sgs.pec.bcb.gov.br" xmlns:impl="https://www3.bcb.gov.br/wssgs/services/FachadaWSSGS" targetNamespace="https://www3.bcb.gov.br/wssgs/services/FachadaWSSGS" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://DefaultNamespace">
+      <xsd:import namespace="http://comum.ws.casosdeuso.sgs.pec.bcb.gov.br" />
+      <xsd:import namespace="https://www3.bcb.gov.br/wssgs/services/FachadaWSSGS" />
+      <xsd:import namespace="http://schemas.xmlsoap.org/soap/encoding/" />
+      <xsd:complexType name="ArrayOfflong">
+        <xsd:complexContent mixed="false">
+          <xsd:restriction base="soapenc:Array">
+            <xsd:attribute wsdl:arrayType="xsd:long[]" ref="soapenc:arrayType" />
+          </xsd:restriction>
+        </xsd:complexContent>
+      </xsd:complexType>
+    </xsd:schema>
+    <xsd:schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://comum.ws.casosdeuso.sgs.pec.bcb.gov.br">
+      <xsd:import namespace="http://DefaultNamespace" />
+      <xsd:import namespace="https://www3.bcb.gov.br/wssgs/services/FachadaWSSGS" />
+      <xsd:import namespace="http://schemas.xmlsoap.org/soap/encoding/" />
+      <xsd:complexType name="WSValorSerieVO">
+        <xsd:sequence>
+          <xsd:element name="ano" type="xsd:int" />
+          <xsd:element name="anoFim" type="xsd:int" />
+          <xsd:element name="bloqueado" type="xsd:boolean" />
+          <xsd:element name="bloqueioLiberado" type="xsd:boolean" />
+          <xsd:element name="dia" type="xsd:int" />
+          <xsd:element name="diaFim" type="xsd:int" />
+          <xsd:element name="mes" type="xsd:int" />
+          <xsd:element name="mesFim" type="xsd:int" />
+          <xsd:element name="oid" type="xsd:long" />
+          <xsd:element name="oidSerie" type="xsd:long" />
+          <xsd:element name="svalor" nillable="true" type="xsd:string" />
+          <xsd:element name="valor" nillable="true" type="xsd:decimal" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="WSSerieVO">
+        <xsd:sequence>
+          <xsd:element name="anoFim" type="xsd:int" />
+          <xsd:element name="anoInicio" type="xsd:int" />
+          <xsd:element name="aviso" nillable="true" type="xsd:string" />
+          <xsd:element name="diaFim" type="xsd:int" />
+          <xsd:element name="diaInicio" type="xsd:int" />
+          <xsd:element name="especial" type="xsd:boolean" />
+          <xsd:element name="fonte" nillable="true" type="xsd:string" />
+          <xsd:element name="fullName" nillable="true" type="xsd:string" />
+          <xsd:element name="gestorProprietario" nillable="true" type="xsd:string" />
+          <xsd:element name="mesFim" type="xsd:int" />
+          <xsd:element name="mesInicio" type="xsd:int" />
+          <xsd:element name="nomeAbreviado" nillable="true" type="xsd:string" />
+          <xsd:element name="nomeCompleto" nillable="true" type="xsd:string" />
+          <xsd:element name="oid" type="xsd:long" />
+          <xsd:element name="periodicidade" nillable="true" type="xsd:string" />
+          <xsd:element name="periodicidadeSigla" nillable="true" type="xsd:string" />
+          <xsd:element name="possuiBloqueios" type="xsd:boolean" />
+          <xsd:element name="publica" type="xsd:boolean" />
+          <xsd:element name="shortName" nillable="true" type="xsd:string" />
+          <xsd:element name="ultimoValor" nillable="true" type="tns2:WSValorSerieVO" />
+          <xsd:element name="unidadePadrao" nillable="true" type="xsd:string" />
+          <xsd:element name="unidadePadraoIngles" nillable="true" type="xsd:string" />
+          <xsd:element name="valorDiaNaoUtil" type="xsd:boolean" />
+          <xsd:element name="valores" nillable="true" type="impl:ArrayOf_tns2_WSValorSerieVO" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="ArrayOffWSSerieVO">
+        <xsd:complexContent mixed="false">
+          <xsd:restriction base="soapenc:Array">
+            <xsd:attribute wsdl:arrayType="tns2:WSSerieVO[]" ref="soapenc:arrayType" />
+          </xsd:restriction>
+        </xsd:complexContent>
+      </xsd:complexType>
+    </xsd:schema>
+    <xsd:schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="https://www3.bcb.gov.br/wssgs/services/FachadaWSSGS">
+      <xsd:import namespace="http://DefaultNamespace" />
+      <xsd:import namespace="http://comum.ws.casosdeuso.sgs.pec.bcb.gov.br" />
+      <xsd:import namespace="http://schemas.xmlsoap.org/soap/encoding/" />
+      <xsd:complexType name="ArrayOf_tns2_WSValorSerieVO">
+        <xsd:complexContent mixed="false">
+          <xsd:restriction base="soapenc:Array">
+            <xsd:attribute wsdl:arrayType="tns2:WSValorSerieVO[]" ref="soapenc:arrayType" />
+          </xsd:restriction>
+        </xsd:complexContent>
+      </xsd:complexType>
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="getUltimoValorXMLResponse">
+    <wsdl:part name="getUltimoValorXMLReturn" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="getUltimosValoresSerieVOResponse">
+    <wsdl:part name="getUltimosValoresSerieVOReturn" type="tns2:WSSerieVO" />
+  </wsdl:message>
+  <wsdl:message name="getValorRequest">
+    <wsdl:part name="in0" type="xsd:long" />
+    <wsdl:part name="in1" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="getValoresSeriesXMLRequest">
+    <wsdl:part name="in0" type="tns1:ArrayOfflong" />
+    <wsdl:part name="in1" type="xsd:string" />
+    <wsdl:part name="in2" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="getValoresSeriesXMLResponse">
+    <wsdl:part name="getValoresSeriesXMLReturn" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="getValorEspecialRequest">
+    <wsdl:part name="in0" type="xsd:long" />
+    <wsdl:part name="in1" type="xsd:string" />
+    <wsdl:part name="in2" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="getValoresSeriesVOResponse">
+    <wsdl:part name="getValoresSeriesVOReturn" type="tns2:ArrayOffWSSerieVO" />
+  </wsdl:message>
+  <wsdl:message name="getValorEspecialResponse">
+    <wsdl:part name="getValorEspecialReturn" type="xsd:decimal" />
+  </wsdl:message>
+  <wsdl:message name="getUltimosValoresSerieVORequest">
+    <wsdl:part name="in0" type="xsd:long" />
+    <wsdl:part name="in1" type="xsd:long" />
+  </wsdl:message>
+  <wsdl:message name="getValorResponse">
+    <wsdl:part name="getValorReturn" type="xsd:decimal" />
+  </wsdl:message>
+  <wsdl:message name="getValoresSeriesVORequest">
+    <wsdl:part name="in0" type="tns1:ArrayOfflong" />
+    <wsdl:part name="in1" type="xsd:string" />
+    <wsdl:part name="in2" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="getUltimoValorVORequest">
+    <wsdl:part name="in0" type="xsd:long" />
+  </wsdl:message>
+  <wsdl:message name="getUltimoValorVOResponse">
+    <wsdl:part name="getUltimoValorVOReturn" type="tns2:WSSerieVO" />
+  </wsdl:message>
+  <wsdl:message name="getUltimoValorXMLRequest">
+    <wsdl:part name="in0" type="xsd:long" />
+  </wsdl:message>
+  <wsdl:portType name="FachadaWSSGS">
+    <wsdl:operation name="getValoresSeriesVO" parameterOrder="in0 in1 in2">
+      <wsdl:input name="getValoresSeriesVORequest" message="impl:getValoresSeriesVORequest" />
+      <wsdl:output name="getValoresSeriesVOResponse" message="impl:getValoresSeriesVOResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="getUltimosValoresSerieVO" parameterOrder="in0 in1">
+      <wsdl:input name="getUltimosValoresSerieVORequest" message="impl:getUltimosValoresSerieVORequest" />
+      <wsdl:output name="getUltimosValoresSerieVOResponse" message="impl:getUltimosValoresSerieVOResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="getValoresSeriesXML" parameterOrder="in0 in1 in2">
+      <wsdl:input name="getValoresSeriesXMLRequest" message="impl:getValoresSeriesXMLRequest" />
+      <wsdl:output name="getValoresSeriesXMLResponse" message="impl:getValoresSeriesXMLResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="getUltimoValorVO" parameterOrder="in0">
+      <wsdl:input name="getUltimoValorVORequest" message="impl:getUltimoValorVORequest" />
+      <wsdl:output name="getUltimoValorVOResponse" message="impl:getUltimoValorVOResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="getUltimoValorXML" parameterOrder="in0">
+      <wsdl:input name="getUltimoValorXMLRequest" message="impl:getUltimoValorXMLRequest" />
+      <wsdl:output name="getUltimoValorXMLResponse" message="impl:getUltimoValorXMLResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="getValor" parameterOrder="in0 in1">
+      <wsdl:input name="getValorRequest" message="impl:getValorRequest" />
+      <wsdl:output name="getValorResponse" message="impl:getValorResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="getValorEspecial" parameterOrder="in0 in1 in2">
+      <wsdl:input name="getValorEspecialRequest" message="impl:getValorEspecialRequest" />
+      <wsdl:output name="getValorEspecialResponse" message="impl:getValorEspecialResponse" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="FachadaWSSGSSoapBinding" type="impl:FachadaWSSGS">
+    <wsdlsoap:binding transport="http://schemas.xmlsoap.org/soap/http" style="rpc" />
+    <wsdl:operation name="getValoresSeriesVO">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="getValoresSeriesVORequest">
+        <wsdlsoap:body use="encoded" namespace="http://publico.ws.casosdeuso.sgs.pec.bcb.gov.br" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output name="getValoresSeriesVOResponse">
+        <wsdlsoap:body use="encoded" namespace="https://www3.bcb.gov.br/wssgs/services/FachadaWSSGS" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getUltimosValoresSerieVO">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="getUltimosValoresSerieVORequest">
+        <wsdlsoap:body use="encoded" namespace="http://publico.ws.casosdeuso.sgs.pec.bcb.gov.br" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output name="getUltimosValoresSerieVOResponse">
+        <wsdlsoap:body use="encoded" namespace="https://www3.bcb.gov.br/wssgs/services/FachadaWSSGS" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getValoresSeriesXML">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="getValoresSeriesXMLRequest">
+        <wsdlsoap:body use="encoded" namespace="http://publico.ws.casosdeuso.sgs.pec.bcb.gov.br" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output name="getValoresSeriesXMLResponse">
+        <wsdlsoap:body use="encoded" namespace="https://www3.bcb.gov.br/wssgs/services/FachadaWSSGS" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getUltimoValorVO">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="getUltimoValorVORequest">
+        <wsdlsoap:body use="encoded" namespace="http://publico.ws.casosdeuso.sgs.pec.bcb.gov.br" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output name="getUltimoValorVOResponse">
+        <wsdlsoap:body use="encoded" namespace="https://www3.bcb.gov.br/wssgs/services/FachadaWSSGS" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getUltimoValorXML">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="getUltimoValorXMLRequest">
+        <wsdlsoap:body use="encoded" namespace="http://publico.ws.casosdeuso.sgs.pec.bcb.gov.br" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output name="getUltimoValorXMLResponse">
+        <wsdlsoap:body use="encoded" namespace="https://www3.bcb.gov.br/wssgs/services/FachadaWSSGS" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getValor">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="getValorRequest">
+        <wsdlsoap:body use="encoded" namespace="http://publico.ws.casosdeuso.sgs.pec.bcb.gov.br" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output name="getValorResponse">
+        <wsdlsoap:body use="encoded" namespace="https://www3.bcb.gov.br/wssgs/services/FachadaWSSGS" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getValorEspecial">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="getValorEspecialRequest">
+        <wsdlsoap:body use="encoded" namespace="http://publico.ws.casosdeuso.sgs.pec.bcb.gov.br" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output name="getValorEspecialResponse">
+        <wsdlsoap:body use="encoded" namespace="https://www3.bcb.gov.br/wssgs/services/FachadaWSSGS" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="FachadaWSSGSService">
+    <wsdl:port name="FachadaWSSGS" binding="impl:FachadaWSSGSSoapBinding">
+      <wsdlsoap:address location="https://www3.bcb.gov.br/wssgs/services/FachadaWSSGS" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

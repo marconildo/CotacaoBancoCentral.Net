@@ -1,0 +1,8 @@
+C:\Users\marco\OneDrive\Documentos\GitHub\CotacaoBancoCentral.Net\src\CotacaoBcB.Net\CotacaoBcb.Console\bin\Debug\CotacaoBcb.Console.exe.config
+C:\Users\marco\OneDrive\Documentos\GitHub\CotacaoBancoCentral.Net\src\CotacaoBcB.Net\CotacaoBcb.Console\bin\Debug\CotacaoBcb.Console.exe
+C:\Users\marco\OneDrive\Documentos\GitHub\CotacaoBancoCentral.Net\src\CotacaoBcB.Net\CotacaoBcb.Console\bin\Debug\CotacaoBcb.Console.pdb
+C:\Users\marco\OneDrive\Documentos\GitHub\CotacaoBancoCentral.Net\src\CotacaoBcB.Net\CotacaoBcb.Console\bin\Debug\CotacaoBcB.Net.dll
+C:\Users\marco\OneDrive\Documentos\GitHub\CotacaoBancoCentral.Net\src\CotacaoBcB.Net\CotacaoBcb.Console\bin\Debug\CotacaoBcB.Net.pdb
+C:\Users\marco\OneDrive\Documentos\GitHub\CotacaoBancoCentral.Net\src\CotacaoBcB.Net\CotacaoBcb.Console\obj\Debug\CotacaoBcb.Console.csprojResolveAssemblyReference.cache
+C:\Users\marco\OneDrive\Documentos\GitHub\CotacaoBancoCentral.Net\src\CotacaoBcB.Net\CotacaoBcb.Console\obj\Debug\CotacaoBcb.Console.exe
+C:\Users\marco\OneDrive\Documentos\GitHub\CotacaoBancoCentral.Net\src\CotacaoBcB.Net\CotacaoBcb.Console\obj\Debug\CotacaoBcb.Console.pdb
