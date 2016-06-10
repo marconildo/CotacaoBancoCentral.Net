@@ -12,7 +12,7 @@ namespace CotacaoBcb.Console
         static void Main(string[] args)
         {
             // 188 - IGP-M
-            new CotacaoBcB.Net.CotacaoBcb().ConsultarCodigoCotacao("inpc");
+            var teste = new CotacaoBcB.Net.CotacaoBcb().ConsultarCodigoCotacao("inpc");
             //System.Console.WriteLine(teste);
             System.Console.ReadLine();
         }
