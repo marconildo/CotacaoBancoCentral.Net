@@ -5,6 +5,7 @@ using System.ServiceModel;
 using System.Xml.Linq;
 using CotacaoBcB.Net.Codigos;
 using CotacaoBcB.Net.WsBcb;
+using CotacaoBcB.Net.Exceptions;
 
 namespace CotacaoBcB.Net
 {
@@ -18,8 +19,13 @@ namespace CotacaoBcB.Net
 
         public CotacaoBcb()
         {
-            _service = new FachadaWSSGSClient(new BasicHttpBinding(BasicHttpSecurityMode.Transport), new EndpointAddress(UrlService));
-            _codigoService = new CodigosService();
+            if (InternetAvailability.IsInternetAvailable())
+            {
+                _service = new FachadaWSSGSClient(new BasicHttpBinding(BasicHttpSecurityMode.Transport), new EndpointAddress(UrlService));
+                _codigoService = new CodigosService();
+            }
+            else
+                throw new InternetNotAvailableException();
         }
 
         /// <summary>

@@ -6,3 +6,11 @@ C:\Users\marco\OneDrive\Documentos\GitHub\CotacaoBancoCentral.Net\src\CotacaoBcB
 C:\Users\marco\OneDrive\Documentos\GitHub\CotacaoBancoCentral.Net\src\CotacaoBcB.Net\CotacaoBcb.WinForm\obj\Debug\CotacaoBcb.WinForm.csproj.GenerateResource.Cache
 C:\Users\marco\OneDrive\Documentos\GitHub\CotacaoBancoCentral.Net\src\CotacaoBcB.Net\CotacaoBcb.WinForm\obj\Debug\CotacaoBcb.WinForm.exe
 C:\Users\marco\OneDrive\Documentos\GitHub\CotacaoBancoCentral.Net\src\CotacaoBcB.Net\CotacaoBcb.WinForm\obj\Debug\CotacaoBcb.WinForm.pdb
+C:\Users\marco\Documents\GitHub\CotacaoBancoCentral.Net\src\CotacaoBcB.Net\CotacaoBcb.WinForm\bin\Debug\CotacaoBcb.WinForm.exe.config
+C:\Users\marco\Documents\GitHub\CotacaoBancoCentral.Net\src\CotacaoBcB.Net\CotacaoBcb.WinForm\bin\Debug\CotacaoBcb.WinForm.exe
+C:\Users\marco\Documents\GitHub\CotacaoBancoCentral.Net\src\CotacaoBcB.Net\CotacaoBcb.WinForm\bin\Debug\CotacaoBcb.WinForm.pdb
+C:\Users\marco\Documents\GitHub\CotacaoBancoCentral.Net\src\CotacaoBcB.Net\CotacaoBcb.WinForm\obj\Debug\CotacaoBcb.WinForm.csprojResolveAssemblyReference.cache
+C:\Users\marco\Documents\GitHub\CotacaoBancoCentral.Net\src\CotacaoBcB.Net\CotacaoBcb.WinForm\obj\Debug\CotacaoBcb.WinForm.Properties.Resources.resources
+C:\Users\marco\Documents\GitHub\CotacaoBancoCentral.Net\src\CotacaoBcB.Net\CotacaoBcb.WinForm\obj\Debug\CotacaoBcb.WinForm.csproj.GenerateResource.Cache
+C:\Users\marco\Documents\GitHub\CotacaoBancoCentral.Net\src\CotacaoBcB.Net\CotacaoBcb.WinForm\obj\Debug\CotacaoBcb.WinForm.exe
+C:\Users\marco\Documents\GitHub\CotacaoBancoCentral.Net\src\CotacaoBcB.Net\CotacaoBcb.WinForm\obj\Debug\CotacaoBcb.WinForm.pdb

@@ -5,3 +5,10 @@ C:\Users\marco\OneDrive\Documentos\GitHub\CotacaoBancoCentral.Net\src\CotacaoBcB
 C:\Users\marco\OneDrive\Documentos\GitHub\CotacaoBancoCentral.Net\src\CotacaoBcB.Net\CotacaoBcB.Net\obj\Debug\CotacaoBcB.Net.pdb
 C:\Users\marco\OneDrive\Documentos\GitHub\CotacaoBancoCentral.Net\src\CotacaoBcB.Net\CotacaoBcB.Net\obj\Debug\CotacaoBcB.Net.Properties.Resources.resources
 C:\Users\marco\OneDrive\Documentos\GitHub\CotacaoBancoCentral.Net\src\CotacaoBcB.Net\CotacaoBcB.Net\obj\Debug\CotacaoBcB.Net.csproj.GenerateResource.Cache
+C:\Users\marco\Documents\GitHub\CotacaoBancoCentral.Net\src\CotacaoBcB.Net\CotacaoBcB.Net\bin\Debug\CotacaoBcB.Net.dll
+C:\Users\marco\Documents\GitHub\CotacaoBancoCentral.Net\src\CotacaoBcB.Net\CotacaoBcB.Net\bin\Debug\CotacaoBcB.Net.pdb
+C:\Users\marco\Documents\GitHub\CotacaoBancoCentral.Net\src\CotacaoBcB.Net\CotacaoBcB.Net\obj\Debug\CotacaoBcB.Net.csprojResolveAssemblyReference.cache
+C:\Users\marco\Documents\GitHub\CotacaoBancoCentral.Net\src\CotacaoBcB.Net\CotacaoBcB.Net\obj\Debug\CotacaoBcB.Net.Properties.Resources.resources
+C:\Users\marco\Documents\GitHub\CotacaoBancoCentral.Net\src\CotacaoBcB.Net\CotacaoBcB.Net\obj\Debug\CotacaoBcB.Net.csproj.GenerateResource.Cache
+C:\Users\marco\Documents\GitHub\CotacaoBancoCentral.Net\src\CotacaoBcB.Net\CotacaoBcB.Net\obj\Debug\CotacaoBcB.Net.dll
+C:\Users\marco\Documents\GitHub\CotacaoBancoCentral.Net\src\CotacaoBcB.Net\CotacaoBcB.Net\obj\Debug\CotacaoBcB.Net.pdb
