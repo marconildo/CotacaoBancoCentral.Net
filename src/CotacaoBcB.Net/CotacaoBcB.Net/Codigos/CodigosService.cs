@@ -35,5 +35,30 @@ namespace CotacaoBcB.Net.Codigos
 
             return null;
         }
+
+        public Serie RecuperarSeriePorCodigo(long codigoSerie)
+        {
+            var docXml = XDocument.Parse(Resources.codigosCotacao);
+
+            if (docXml.Root != null)
+            {
+                var result = (from item in docXml.Root.Elements()
+                    let xCodigo = item.Element("Codigo")
+                    where xCodigo != null && Convert.ToInt64(xCodigo.Value) == codigoSerie
+                    let xDescricao = item.Element("Descricao")
+                    where
+                        xDescricao != null
+                    select new Serie
+                    {
+                        Codigo = Convert.ToInt64(xCodigo.Value),
+                        Descricao = xDescricao.Value
+                    }).FirstOrDefault();
+
+
+                return result;
+            }
+
+            return null;
+        }
     }
 }

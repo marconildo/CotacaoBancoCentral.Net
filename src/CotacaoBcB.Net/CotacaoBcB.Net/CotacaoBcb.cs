@@ -35,6 +35,11 @@ namespace CotacaoBcB.Net
         /// <returns>Série - Formato XML</returns>
         public XDocument ConsultarUltimoValorXml(long codigoCotacao)
         {
+            var serie = _codigoService.RecuperarSeriePorCodigo(codigoCotacao);
+
+            if(serie == null)
+                throw new InvalidCodeException();
+
             var retornoWs = _service.getUltimoValorXML(codigoCotacao);
             return XDocument.Parse(retornoWs);
         }
@@ -45,6 +50,11 @@ namespace CotacaoBcB.Net
         /// <returns>Objeto contendo o valor</returns>
         public WSSerieVO ConsultarUltimoValor(long codigoCotacao)
         {
+            var serie = _codigoService.RecuperarSeriePorCodigo(codigoCotacao);
+
+            if (serie == null)
+                throw new InvalidCodeException();
+
             return _service.getUltimoValorVO(codigoCotacao);
         }
 
@@ -56,6 +66,11 @@ namespace CotacaoBcB.Net
         /// <returns>Valor da Série</returns>
         public decimal ConsultarValorEspecifico(long codigoCotacao, DateTime data)
         {
+            var serie = _codigoService.RecuperarSeriePorCodigo(codigoCotacao);
+
+            if (serie == null)
+                throw new InvalidCodeException();
+
             return _service.getValor(codigoCotacao, data.ToString("dd/MM/yyyy"));
         }
 
@@ -68,6 +83,11 @@ namespace CotacaoBcB.Net
         /// <returns>Valor da Série</returns>
         public decimal ConsultarValorEspecificoPerido(long codigoCotacao, DateTime dataIni, DateTime dataFim)
         {
+            var serie = _codigoService.RecuperarSeriePorCodigo(codigoCotacao);
+
+            if (serie == null)
+                throw new InvalidCodeException();
+
             return _service.getValorEspecial(codigoCotacao, dataIni.ToString("dd/MM/yyyy"), dataFim.ToString(FormatoData));
         }
 
@@ -80,6 +100,16 @@ namespace CotacaoBcB.Net
         /// <returns>Resultado da consulta em formato XML</returns>
         public XDocument ConsultarValoresSeriesXml(long[] codigosCotacao, DateTime dataIni, DateTime dataFim)
         {
+            if (codigosCotacao == null)
+                throw new ArgumentNullException(nameof(codigosCotacao));
+            if (codigosCotacao.Length == 0)
+                throw new ArgumentNullException(nameof(codigosCotacao));
+
+            if (codigosCotacao.Select(codigoIndice => _codigoService.RecuperarSeriePorCodigo(codigoIndice)).Any(serie => serie == null))
+            {
+                throw new InvalidCodeException();
+            }
+
             var retornoWs = _service.getValoresSeriesXML(codigosCotacao, dataIni.ToString(FormatoData), dataFim.ToString(FormatoData));
             return XDocument.Parse(retornoWs);
         }
@@ -93,11 +123,24 @@ namespace CotacaoBcB.Net
         /// <returns> Lista(array) de objeto série.</returns>
         public IEnumerable<WSSerieVO> ConsultarValoresSeries(long[] codigosCotacao, DateTime dataIni, DateTime dataFim)
         {
+            if (codigosCotacao == null)
+                throw new ArgumentNullException(nameof(codigosCotacao));
+            if (codigosCotacao.Length == 0)
+                throw new ArgumentNullException(nameof(codigosCotacao));
+
+            if (codigosCotacao.Select(codigoIndice => _codigoService.RecuperarSeriePorCodigo(codigoIndice)).Any(serie => serie == null))
+            {
+                throw new InvalidCodeException();
+            }
+
             return _service.getValoresSeriesVO(codigosCotacao, dataIni.ToString(FormatoData), dataFim.ToString(FormatoData)).ToList();
         }
 
         public IEnumerable<Serie> ConsultarCodigoCotacao(string nomeSerie)
         {
+            if(string.IsNullOrEmpty(nomeSerie))
+                throw new ArgumentNullException(nameof(nomeSerie));
+
             return _codigoService.RecuperarSeriePorNome(nomeSerie);
         }
     }
